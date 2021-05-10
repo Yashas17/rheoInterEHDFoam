@@ -14,7 +14,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     rheoInterEHDFoam2;
+application     rheoInterEHDFoam;
 
 startFrom       latestTime;
 
