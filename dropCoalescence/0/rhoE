@@ -9,29 +9,29 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volVectorField;
+    class       volScalarField;
     location    "0";
-    object      U;
+    object      rhoE;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 1 -1 0 0 0 0];
+dimensions      [0 -3 1 0 0 1 0];
 
-internalField uniform (0 0 0);
+internalField   uniform 0;
 
 boundaryField
 {
     upperElectrode
     {
-        type            noSlip;
+        type            zeroGradient;
     }
     lowerElectrode
     {
-        type            noSlip;
+        type            zeroGradient;
     }
     walls
     {
-        type            noSlip;
+        type            zeroGradient;
     }
     wedgeFront
     {
